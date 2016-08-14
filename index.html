@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Cat Facts</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+<div class="section no-pad-bot light" id="index-banner">
+    <div class="container">
+        <div class="row center">
+            <h1 id="title" class="header center">Cat Facts</h1>
+            <h5 id="fact" class="header col s12 light"></h5>
+            <img id="image" width="50%" src="http://thecatapi.com/api/images/get?format=src&type=gif"><br>
+        </div>
+        <div class="row center">
+            <button onClick="window.location.reload()" id="download-button" class="btn-large waves-effect waves-light">Tell me something!</button>
+        </div>
+        <br><br>
+
+    </div>
+</div>
+</body>
+
+<script src="js/catFacts.js"></script>
+</html>
