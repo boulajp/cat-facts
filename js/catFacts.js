@@ -8,7 +8,7 @@
 })();
 
 (function fetchFactAndSetHTML() {
-    $.get('http://localhost:3000/api/facts?number=1', function(response) {
+    $.get('https://cat-facts-api.herokuapp.com/api/facts?number=1', function(response) {
         var data = JSON.parse(response);
         if(data.success) {
             document.getElementById('fact').innerHTML = data.facts[0];
