@@ -32,6 +32,11 @@ function setColorClasses() {
 }
 
 function setImage() {
+
+    var image = document.getElementById('image');
+    image.onload = function() {
+        Materialize.fadeInImage('#image');
+    };
     document.getElementById('image').src = 'http://thecatapi.com/api/images/get?format=src&type=gif&' + (new Date()).getTime();
 }
 

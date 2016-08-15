@@ -7,8 +7,17 @@
  */
 
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
+}
+
+.row {
+    margin-top: 10%;
+}
+
+.card-image {
+    height: 50%;
+    overflow:hidden;
 }
