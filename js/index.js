@@ -38,6 +38,7 @@ function doStuff() {
     var image = document.getElementById('image');
 
     image.onload = function() {
+        fadeInImage();
         setFact();
         if (hasRun)
             removeColorClasses();
@@ -45,7 +46,6 @@ function doStuff() {
             hasRun = true;
         setLightenClasses();
         setColorClasses();
-        fadeInImage();
 
     };
 
