@@ -1,5 +1,6 @@
 var colors = ['red', 'blue', 'cyan', 'green', 'orange', 'purple', 'brown'];
 var hasRun = false;
+var queuedImage = new Image();
 
 function removeColorClasses() {
     var title = document.getElementById('title');
@@ -18,7 +19,7 @@ function setLightenClasses() {
 }
 
 function setColorClasses() {
-    var color = colors[Math.floor(Math.random()*colors.length)];
+    var color = colors[Math.floor(Math.random() * colors.length)];
 
     document.getElementById('title').className += ' ' + color + '-text';
     document.getElementById('download-button').className += ' ' + color;
@@ -34,8 +35,8 @@ function fadeInImage() {
 }
 
 function doStuff() {
-
     var image = document.getElementById('image');
+
     image.onload = function() {
         setFact();
         if (hasRun)
@@ -47,7 +48,16 @@ function doStuff() {
         fadeInImage();
 
     };
-    document.getElementById('image').src = 'http://thecatapi.com/api/images/get?format=src&type=gif&' + (new Date()).getTime();
+
+    if (!image.src) {
+        image.src = 'http://thecatapi.com/api/images/get?format=src&type=gif&' + (new Date()).getTime();
+        queuedImage.src = 'http://thecatapi.com/api/images/get?format=src&type=gif&' + ((new Date()).getTime() + 1) ;
+    }
+    else {
+        image.src = queuedImage.src;
+        queuedImage.src = 'http://thecatapi.com/api/images/get?format=src&type=gif&' + (new Date()).getTime();
+    }
+
 }
 
 doStuff();
