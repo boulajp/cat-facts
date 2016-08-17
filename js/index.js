@@ -34,16 +34,23 @@ function fadeInImage() {
     Materialize.fadeInImage('#image');
 }
 
+function removeHiddenClass() {
+    document.getElementsByTagName('body')[0].removeAttribute('hidden');
+}
+
 function doStuff() {
     var image = document.getElementById('image');
 
     image.onload = function() {
         fadeInImage();
         setFact();
-        if (hasRun)
-            removeColorClasses();
-        else
+        if (!hasRun) {
             hasRun = true;
+            removeHiddenClass();
+        }
+        else {
+            removeColorClasses();
+        }
         setLightenClasses();
         setColorClasses();
 
