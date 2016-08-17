@@ -35,7 +35,8 @@ function fadeInImage() {
 }
 
 function removeHiddenClass() {
-    document.getElementsByTagName('body')[0].removeAttribute('hidden');
+    document.getElementsByClassName('card')[0].removeAttribute('hidden');
+    document.getElementById('loading').setAttribute('hidden', '');
 }
 
 function doStuff() {

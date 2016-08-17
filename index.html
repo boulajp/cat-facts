@@ -15,11 +15,24 @@
       <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
       <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
-  <body hidden>
+  <body>
       <div class="container">
           <div class="row">
               <div class="col s12 m8 offset-m2 l6 offset-l3">
-                  <div class="card">
+                  <div id="loading">
+                      <div class="preloader-wrapper big active">
+                          <div class="spinner-layer spinner-blue">
+                              <div class="circle-clipper left">
+                                  <div class="circle"></div>
+                              </div><div class="gap-patch">
+                              <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card" hidden>
                       <div class="card-image">
                           <img id="image" class="responsive-img">
                           <span id="title" class="card-title">Cat Facts</span>
