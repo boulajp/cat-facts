@@ -34,6 +34,10 @@ function fadeInImage() {
     Materialize.fadeInImage('#image');
 }
 
+function removeHiddenClass() {
+    document.getElementsByClassName('card')[0].removeAttribute('hidden');
+}
+
 function doStuff() {
     var image = document.getElementById('image');
 
@@ -42,6 +46,7 @@ function doStuff() {
         setFact();
         if (!hasRun) {
             hasRun = true;
+            removeHiddenClass();
         }
         else {
             removeColorClasses();
