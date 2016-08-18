@@ -12,12 +12,6 @@ function removeColorClasses() {
     body.className = body.className.substring(0, body.className.lastIndexOf(' '));
 }
 
-function setLightenClasses() {
-    document.getElementById('title').className += ' text-lighten-3';
-    document.getElementById('download-button').className += ' lighten-3';
-    document.getElementsByTagName('body')[0].className += ' lighten-1';
-}
-
 function setColorClasses() {
     var color = colors[Math.floor(Math.random() * colors.length)];
 
@@ -51,7 +45,6 @@ function doStuff() {
         else {
             removeColorClasses();
         }
-        setLightenClasses();
         setColorClasses();
 
     };
